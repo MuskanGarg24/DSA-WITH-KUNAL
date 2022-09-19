@@ -1,22 +1,25 @@
-import java.util.List;
+import java.util.*;
 
 class Solution {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
-        int count = 0;
-        for (int i = 0; i < items.size(); i++) {
-            
-            
-                if (ruleKey.equals("color") && ruleValue.equals(items.get(i).get(1))) {
-                    count++;
-                } else if(ruleKey.equals("type") && ruleValue.equals(items.get(i).get(0))) {
-                    count++;
-                } else if (ruleKey.equals("name") && ruleValue.equals(items.get(i).get(2))) {
-                    count++;
-                }
-                
-            
-            
+        
+        int index=0;
+
+        if(ruleKey.equals("color")){
+            index=1;
         }
+        else if(ruleKey.equals("name")){
+            index=2;
+        }
+
+        int count=0;
+
+        for(List<String> item:items){
+            if(item.get(index).equals(ruleValue)){
+                count++;
+            }            
+        }
+
         return count;
     }
 }

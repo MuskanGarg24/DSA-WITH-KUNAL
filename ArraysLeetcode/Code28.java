@@ -1,12 +1,23 @@
-public class Code28 {
-        public int removeDuplicates(int[] nums) {
-            int i = 1;
-            for(int j = 1; j < nums.length ; j++){
-                if(nums[j] > nums[j-1]){ 
-                    nums[i] = nums[j]; 
-                    i++;
-                }
-                }
-            return i;
+class Solution {
+    public int minCostToMoveChips(int[] position) {
+        
+        int n = position.length;
+        
+        int even=0;
+        int odd=0;
+        
+        for(int i=0; i<n; i++){
+            if(position[i]%2==0){
+                even++;
+            }
+            else{
+                odd++;
+            }
         }
+        
+        int result = Math.min(even,odd);
+        
+        return result;
+        
     }
+}

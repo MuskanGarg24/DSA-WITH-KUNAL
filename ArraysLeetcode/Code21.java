@@ -1,5 +1,6 @@
 // two sum
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Code21 {
@@ -17,15 +18,21 @@ public class Code21 {
 
         int target = in.nextInt();
 
+        ArrayList<Integer> indexes = new ArrayList<Integer>();
+
         for(int i=0; i<n-1; i++){
             for(int j=i+1; j<n; j++){
                 if(arr[i]+arr[j]==target){
-                    System.out.println(i + " "+ j);
+                    indexes.add(i);
+                    indexes.add(j);
                     break;
                 }
             }
         }
 
+        for(int i=0; i<indexes.size(); i++){
+            System.out.print(indexes.get(i) + " ");
+        }
 
         in.close();
     }
