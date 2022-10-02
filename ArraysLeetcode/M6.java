@@ -1,7 +1,7 @@
 // first and last occurrence of an element;
 
 
-public class firstAndLastOccurence {
+public class M6 {
     public static void main(String[] args) {
         
         int[] arr = {2,4,10,10,10,20};
