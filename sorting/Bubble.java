@@ -1,12 +1,13 @@
+// compare the adjacent elements and swap
+
 import java.util.Arrays;
 
-public class Code{
+public class Bubble{
     public static void main(String[] args) {
         int[] arr = {1,3,5,4,2};
         bubbleSort(arr);
         System.out.println(Arrays.toString(arr));
     }
-
     static void bubbleSort(int[] arr){
         boolean swapped;
         for(int i=0; i<arr.length; i++){

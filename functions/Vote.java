@@ -5,23 +5,21 @@ import java.util.Scanner;
 public class Vote {
     public static void main(String[] args) {
         int age;
-        try(Scanner in = new Scanner(System.in)){
+        try (Scanner in = new Scanner(System.in)) {
             age = in.nextInt();
         }
         boolean isEligible = vote(age);
-        if(isEligible){
+        if (isEligible) {
             System.out.println("Eligible to vote");
-        }
-        else{
+        } else {
             System.out.println("Not Eligible to vote");
         }
     }
 
-    static boolean vote(int age){
-        if(age>=18){
+    static boolean vote(int age) {
+        if (age >= 18) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }

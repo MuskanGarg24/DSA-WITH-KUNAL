@@ -1,0 +1,31 @@
+--> string is an array of characters
+--> example - String name = "muskan garg";
+--> sout(name)
+
+
+--> strings are immutable
+
+string a = "muskan"
+string b = "muskan"
+
+a==b --> true --> both a and b are creating one object
+
+
+
+##### in order to create two separate objects of same value, we use new keyword
+
+string a = new string("muskan")
+string b = new string("muskan")
+
+now a==b --> false --> both a and b are two different objects now even though their value is same.
+
+
+
+## when you only need to check value, use .equals method
+
+--> (a==b) --> will check value as well as their address in the heap
+--> (a.equals(b)) --> will only check whether the value is same or not.
+
+
+
+--> to access a particular character in a string --> use charAt(index)
