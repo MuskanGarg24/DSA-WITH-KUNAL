@@ -102,6 +102,33 @@ public class BT {
         }
     }
 
+    // class Solution {
+    // public List<List<Integer>> levelOrder(TreeNode root) {
+    // List<List<Integer>> lists = new ArrayList<>();
+    // if(root == null){
+    // return lists;
+    // }
+    // Queue<TreeNode> q = new LinkedList<>();
+    // q.add(root);
+    // while(!q.isEmpty()){
+    // int levelSize = q.size();
+    // List<Integer> list = new ArrayList<>();
+    // for(int i = 0; i < levelSize; i++){
+    // TreeNode currNode = q.remove();
+    // list.add(currNode.val);
+    // if(currNode.left != null){
+    // q.add(currNode.left);
+    // }
+    // if(currNode.right != null){
+    // q.add(currNode.right);
+    // }
+    // }
+    // lists.add(list);
+    // }
+    // return lists;
+    // }
+    // }
+
     // count nodes
     // time complexity: O(n)
     public static int countNodes(Node root) {
@@ -191,12 +218,10 @@ public class BT {
             return false;
         }
 
-        if (root.data == subRoot.data) {
-            return isIdentical(root.left, subRoot) && isIdentical(root.right, subRoot);
+        if (root.data != subRoot.data) {
+            return false;
         }
-
-        return false;
-
+        return isIdentical(root.left, subRoot.left) && isIdentical(root.right, subRoot.right);
     }
 
     public static boolean isSubtree(Node root, Node subRoot) {
