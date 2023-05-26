@@ -1,4 +1,4 @@
-// Adjancey list from
+// Adjancey list form
 
 import java.util.ArrayList;
 import java.util.LinkedList;
